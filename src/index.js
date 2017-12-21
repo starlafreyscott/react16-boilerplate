@@ -10,7 +10,7 @@ const rootEl = document.getElementById("root");
 // a simple object to pass to the component as a prop
 let propObj = {
     title: 'Hey I\'m required! and I came from index.js as a prop',
-    input: <input placeholder={'Placeholder'}/>, // Yes elements can be sent as a prop
+    input: <input placeholder={'Placeholder'}/>, // Yes elements can be sent as a props
     copy: 'I\'m optional but still useful!'
 }
 

@@ -1,16 +1,33 @@
 {
   "name": "react-webpack-babel-starter",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha",
   "description": "Starter kit for React, Webpack (with Hot Module Replacement) and Babel.",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react 16",
+    "babel 6",
+    "hot loader",
+    "Webpack 3",
+    "jsx",
+    "jest 21",
+    "express",
+    "simple",
+    "boilerplate",
+    "node 8",
+    "sass",
+    "npm 5",
+    "image loader",
+    "HMR",
+    "linter",
+    "webpack-dev-server"
+  ],
+  "author": "starla",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/danwillscott/react16-boilerplate/"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/danwillscott/react16-boilerplate/issues"
   },
   "homepage": "",
   "scripts": {
@@ -39,7 +56,6 @@
     "jest": "21.2.1",
     "jshint": "2.9.5",
     "lodash": "4.17.4",
-    "material-ui": "1.0.0-beta.23",
     "node-sass": "4.5.3",
     "postcss-loader": "2.0.6",
     "prop-types": "^15.6.0",
