@@ -7,6 +7,13 @@ import App from "./components/App";
 // Find and store the element where we mount react
 const rootEl = document.getElementById("root");
 
+// a simple object to pass to the component as a prop
+let propObj = {
+    title: 'Hey I\'m required! and I came from index.js as a prop',
+    input: <input placeholder={'Placeholder'}/>, // Yes elements can be sent as a prop
+    copy: 'I\'m optional but still useful!'
+}
+
 
 // We are passing the component in this case app to this arrow function
 // This allows for containerizing our components in parent components.
@@ -17,7 +24,7 @@ const renderComponent = (Component) => {
     // calling ReactDOM.render allows us to put the component in a hotloader component
     ReactDOM.render(
         <AppContainer>
-            <Component/>
+            <Component footer={propObj}/>
         </AppContainer>,
         rootEl
     );

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 // All react components need to import react unless you make react a global name space object which isn't recommended
 
@@ -27,17 +28,20 @@ class App extends React.Component {
 
     // The render can contain variables or simple processing of data
     render() {
-
         // using the { must be same as the state variable name } assigns it to a variable of the same name as in state
         let { timer } = this.state;
+        let { title, input, copy } = this.props.footer;
 
         // Here you are returning the data that will be rendered into html
         return (
             <div style={{display: 'inline-block'}} className="app">
                 <img height='40px' src={reactLogo}/>
-                <h1>{resource.h1}</h1>
-                <p>{resource.p}</p>
-                <p>{timer}</p>
+                <h1>{ resource.h1 }</h1>
+                <p>{ resource.p }</p>
+                <p>{ timer }</p>
+                <h3>*{ title }*</h3>
+                <div>{ input }</div>
+                <p>{ copy }</p>
             </div>
         )
     }
@@ -56,15 +60,13 @@ class App extends React.Component {
     // method example
     handleTimer() {
         // naming the variable the same as the state variable allows you to pass it by itself see below
-        let timer = new Date().toLocaleTimeString()
+        let timer = new Date().toLocaleTimeString();
 
         // This is the same as doing the fallowing
         // timer:timer but because of using the same variable name you can set like this for simplified code
         this.setState({
-
             timer
         })
-
     }
 }
 
@@ -74,6 +76,15 @@ class App extends React.Component {
 * This is extremely useful in troubleshooting more complex components
  */
 
+App.propTypes = {
+    footer: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        input: PropTypes.element,
+        copy: PropTypes.string
+    }), // Optional prop
+};
+
+let footerTitle = 'This is the footer and is required';
 // You must export the default app.
 // Please export here because this will allow passing params to the exported class if needed
 
