@@ -1,0 +1,47 @@
+{
+  "common": {
+    "imports": ["list of imports"]
+  },
+
+  "input": {
+    "formWrapped": false,
+
+    "value": "Value in the input field",
+    "placeHolder": "some text for the placeholder",
+    "typeOf": [
+      "A String",
+      "button",
+      "checkBox",
+      "date",
+      "email",
+      "hidden", {"image": {"src": "url"}}],
+    "cName": "class of input",
+    "name": "name-field",
+    "onclick": "functionName(params)",
+    "clickParams": ["String", "Array", "Obj", "function"],
+    "inlineStyle": {"background": "red"},
+    "size": "width of input",
+
+    "multi": false,
+    "required": false,
+
+    "autoComplete": false,
+
+    "pattern": "regex pattern for validation"
+
+
+  },
+
+  "imgProperties": {
+    "src": "url",
+    "alt": "string",
+    "height": "string Number",
+    "width": "string Number",
+    "accept": "submitOrImg" // This points to the submitOrImg for type of value
+
+  },
+
+  "submitOrImg": ["one of these", "_blank", "_self", "_parent", "top", "filename"],
+  "typeFile": ["audio/*", "video/*", "image/*", "media_type"]
+
+}

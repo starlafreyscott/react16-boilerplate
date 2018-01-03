@@ -12,7 +12,7 @@ let propObj = {
     title: 'Hey I\'m required! and I came from index.js as a prop',
     input: <input placeholder={'Placeholder'}/>, // Yes elements can be sent as a props
     copy: 'I\'m optional but still useful!'
-}
+};
 
 
 // We are passing the component in this case app to this arrow function

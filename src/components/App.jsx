@@ -1,5 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Img from './BaseComps/Img/Img'
+// +++++++++++++ Importing Components +++++++++++++
+
+import RepeatElement from '../constructors/RepeatElement'
+import Time from './Time/Time'
+
+// +++++++++++++ Importing Components +++++++++++++
 
 // All react components need to import react unless you make react a global name space object which isn't recommended
 
@@ -11,6 +18,12 @@ require("!style-loader!css-loader!sass-loader!./App.scss");
 
 // image source is pulled in from a location by using require then use that const as the parameter for the img tag src
 const reactLogo = require('./react_logo.svg');
+
+const imgProps = {
+    height:'40px',
+    width:'40px',
+    src: reactLogo
+}
 
 // This is an example of a class based component
 class App extends React.Component {
@@ -35,40 +48,19 @@ class App extends React.Component {
         // Here you are returning the data that will be rendered into html
         return (
             <div style={{display: 'inline-block'}} className="app">
-                <img height='40px' src={reactLogo}/>
+                <Img imgShape={imgProps}/>
                 <h1>{ resource.h1 }</h1>
                 <p>{ resource.p }</p>
-                <p>{ timer }</p>
+                <Time />
                 <h3>*{ title }*</h3>
                 <div>{ input }</div>
                 <p>{ copy }</p>
+                <RepeatElement repeatProp={{el: 'a'}} />
             </div>
         )
     }
-
-    // default method called once the component is mounted/rendered on the page
-    componentDidMount(){
-
-        // setting an interval of 1000 milsec or 1 second calls the handle timer function to keep updating the time
-        // On the page you will now see the timer update every second
-        setInterval(()=>{
-            this.handleTimer();
-        }, 1000);
-
-    }
-
-    // method example
-    handleTimer() {
-        // naming the variable the same as the state variable allows you to pass it by itself see below
-        let timer = new Date().toLocaleTimeString();
-
-        // This is the same as doing the fallowing
-        // timer:timer but because of using the same variable name you can set like this for simplified code
-        this.setState({
-            timer
-        })
-    }
 }
+
 
 /*
 * Typically we will want to set prop types here. This is to ensure only the proper data is passed to our component
