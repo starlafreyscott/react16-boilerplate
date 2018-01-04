@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /*
- *
+ * Basic img with easier loading.
+ * [] Img should have resize property in scss
+ * []
  */
 
 class Img extends React.Component{

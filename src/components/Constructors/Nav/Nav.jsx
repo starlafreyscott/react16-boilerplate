@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Resources from "./Nav.json";
 // import PropTypes from 'prop-types';
@@ -6,6 +7,8 @@ require("!style-loader!css-loader!sass-loader!./Nav.scss");
 
 console.log(Resources);
 
+
+// TODO Move the fallowing into another repo and use for constructors
 /*
 * TestCases:
 * [] Nav should take json shape props
@@ -13,7 +16,7 @@ console.log(Resources);
 * [] Nav should apply <li> <img> <a> <i> tags
 *
 * [] Dashboard should move page to dashboard state ** DEFAULT STATE **
-* [] Nav should have Nucleus Icon and name
+* [] Nav should have Harmony Icon and name
 * [] Username should dynamically change to the set user
 * [] Tools should be a drop down with dynamic list
 * [] Incident manager should display a modal for Incidents

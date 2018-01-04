@@ -1,0 +1,2 @@
+Install brew
+brew reinstall libpng (if using jpg files)
