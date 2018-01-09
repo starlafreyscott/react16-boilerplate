@@ -1,0 +1,6 @@
+{
+  "functionSet": "./FunctionSet",
+  "className": "x-1-test",
+  "id": "x-1-test",
+  "onClick": "xrClick"
+}

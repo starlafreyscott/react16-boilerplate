@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Img from './BaseComps/Img/Img'
+import Table from './BaseComps/Table/Table'
+
 // +++++++++++++ Importing Components +++++++++++++
 
 import RepeatElement from '../constructors/RepeatElement'
@@ -23,7 +25,7 @@ const imgProps = {
     height:'40px',
     width:'40px',
     src: reactLogo
-}
+};
 
 // This is an example of a class based component
 class App extends React.Component {
@@ -56,6 +58,7 @@ class App extends React.Component {
                 <div>{ input }</div>
                 <p>{ copy }</p>
                 <RepeatElement repeatProp={{el: 'a'}} />
+                <Table/>
             </div>
         )
     }
@@ -67,6 +70,8 @@ class App extends React.Component {
 * This helps with handling the wrong types of data or missing data and while in dev it can throw an error for us
 * This is extremely useful in troubleshooting more complex components
  */
+
+// TODO add default props
 
 App.propTypes = {
     footer: PropTypes.shape({

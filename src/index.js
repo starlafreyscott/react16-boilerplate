@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {AppContainer} from "react-hot-loader";
 import App from "./components/App";
 import A from "./components/BaseComps/A/A";
-
+import SuperElement from './experimental/X-comps/x1'
 
 // Find and store the element where we mount react
 const rootEl = document.getElementById("root");
@@ -11,7 +11,7 @@ const rootEl = document.getElementById("root");
 // a simple object to pass to the component as a prop
 let propObj = {
     title: 'Hey I\'m required! and I came from index.js as a prop',
-    input: <A/>, // Yes elements can be sent as a props
+    input: <SuperElement/>, // Yes elements can be sent as a props
     copy: 'I\'m optional but still useful!'
 };
 

@@ -1,0 +1,17 @@
+{
+  "li": [
+    {
+      "className": "li-1",
+      "id": "li-num-",
+      "value":"1",
+      "OnClick": false,
+      "childElement": {"hasElement": true, "elementType": "a"}
+    },
+    {
+      "className": "li-2",
+      "id": "li-num-",
+      "value":"2",
+      "OnClick": true
+    }
+  ]
+}
